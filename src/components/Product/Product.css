@@ -46,3 +46,7 @@
 .btn-cart:hover {
     background-color: #e0b158;
 }
+
+.cart-icon {
+    margin-left: 10px;
+}
