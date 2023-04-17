@@ -13,3 +13,10 @@
 .products-container h1 {
     font-size: 2.2em;
 }
+
+@media only screen and (max-width: 768px) {
+    .products-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
