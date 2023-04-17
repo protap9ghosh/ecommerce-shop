@@ -6,6 +6,7 @@ const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
 
+    // Load API data
     useEffect(() => {
         fetch("products.json")
             .then((res) => res.json())
