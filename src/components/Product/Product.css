@@ -1,9 +1,7 @@
 .product {
     width: 300px;
     height: 500px;
-    /* border: 1px solid tomato; */
     border-radius: 8px;
-    /* padding: 15px; */
     box-shadow: 1px 1px 8px gray;
     position: relative;
 }
