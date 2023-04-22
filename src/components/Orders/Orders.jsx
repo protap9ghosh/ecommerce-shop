@@ -10,10 +10,14 @@ const Orders = () => {
     const [cart, setCart] = useState(savedCart);
 
     const handleRemoveFromCart = (id) => {
-        const remaining = cart.filter(product => product.id !== id);
+        const remaining = cart.filter((product) => product.id !== id);
         setCart(remaining);
         removeFromDb(id);
-    }
+    };
+
+    const handleClearCart = () => {
+        setCart([]);
+    };
 
     return (
         <div className="shop-container">
@@ -27,7 +31,7 @@ const Orders = () => {
                 ))}
             </div>
             <div className="cart-container">
-                <Cart cart={cart}></Cart>
+                <Cart cart={cart} handleClearCart={handleClearCart}></Cart>
             </div>
         </div>
     );
