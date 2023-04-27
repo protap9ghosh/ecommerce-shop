@@ -8,6 +8,7 @@
 }
 
 nav.header a {
+    font-size: larger;
     color: white;
     text-decoration: none;
     margin-left: 32px;
@@ -16,6 +17,10 @@ nav.header a {
 
 nav.header a:hover {
     color: orange;
+}
+
+.font-icon {
+    font-size: x-large;
 }
 
 @media only screen and (max-width: 780px) {
