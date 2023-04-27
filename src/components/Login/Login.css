@@ -1,11 +1,11 @@
 .form-container {
     width: 23em;
-    height: 450px;
+    height: auto;
     margin: 3em auto;
-    border: 1px solid #95A0A7;
+    border: 1px solid rgb(255, 153, 0);
     border-radius: 8px;
-    box-shadow: 0 0 10px 2px lightseagreen;
-    padding: 0 0 0 80px;
+    box-shadow: 0 0 10px 2px rgba(172, 106, 8, 0.603);
+    padding: 0 0 40px 80px;
 }
 
 .form-title {
@@ -55,5 +55,15 @@
 }
 
 .btn-submit:hover {
-    background: rgba(255, 153, 0, 0.5);
+    background: rgba(255, 153, 0, 0.548);
+    box-shadow: 0 0 5px 2px rgba(102, 67, 15, 0.603);
+}
+
+.have-login{
+    color: #FF9900;
+    transition: .2s;
+}
+
+.have-login:hover {
+    text-decoration: underline;
 }

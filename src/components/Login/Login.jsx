@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Login.css"
+import { Link } from 'react-router-dom';
 
 const Login = () => {
     return (
@@ -18,6 +19,8 @@ const Login = () => {
                     <input className='btn-submit' type="submit" value="Login" />
                 </div>
             </form>
+
+            <p><small>New to e-commerce shop? <Link to="/singup" className='have-login'>Create New Account</Link></small></p>
         </div>
     );
 };
