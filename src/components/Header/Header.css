@@ -17,3 +17,17 @@ nav.header a {
 nav.header a:hover {
     color: orange;
 }
+
+@media only screen and (max-width: 780px) {
+    .header {
+        display: block;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav.header a {
+        margin-left: 15px;
+    }
+}
