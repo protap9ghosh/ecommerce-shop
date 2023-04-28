@@ -29,7 +29,11 @@ const Header = () => {
                     <Link to="/login"><FontAwesomeIcon icon={faUserLarge} className="font-icon" /></Link>
                     <Link to="/singup"><FontAwesomeIcon icon={faRightToBracket} className="font-icon" /></Link>
 
-                    {user && <span>Welcome{user.email} <button onClick={handleLogOut}>Sign Out</button></span>}
+                    {
+                        user &&
+                        <span className="user-info">
+                            {user.email} <button onClick={handleLogOut} className="btn-logOut">Log Out</button>
+                        </span>}
                 </div>
             </nav>
         </div>

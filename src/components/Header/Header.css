@@ -20,6 +20,22 @@ nav.header a:hover {
     color: orange;
 }
 
+.user-info {
+    padding-left: 25px;
+}
+
+.btn-logOut {
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin-left: 5px;
+    background: rgb(255, 153, 0);
+    transition: .2s;
+}
+
+.btn-logOut:hover {
+    background: rgba(252, 167, 40, 0.822);
+}
+
 .font-icon {
     font-size: x-large;
 }

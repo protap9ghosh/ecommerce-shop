@@ -22,6 +22,14 @@ const SignUP = () => {
             toast.error('Your password did not match');
             return;
         }
+        else if (!/(?=.*[A-Z].*[A-Z])/.test(password)) {
+            toast.error("Please add at least two uppercase");
+            return;
+        }
+        else if (!/(?=.*[0-9].*[0-9])/.test(password)) {
+            toast.error("Please add at least two number");
+            return;
+        }
         else if (password.length < 6) {
             toast.error('Password must be 6 characters or longer');
             return;
@@ -32,6 +40,7 @@ const SignUP = () => {
                 const loggedUser = result.user;
                 toast.success("User Sign Up Successful");
                 console.log(loggedUser);
+                form.reset();
             })
             .catch(error => {
                 console.log(error);
