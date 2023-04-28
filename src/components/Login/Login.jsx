@@ -2,6 +2,8 @@ import React, { useContext } from 'react';
 import "./Login.css"
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../Providers/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const { signIn } = useContext(AuthContext);
@@ -17,6 +19,7 @@ const Login = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                toast.success("Log In Successful");
                 form.reset();
             })
             .catch(error => {
@@ -42,6 +45,7 @@ const Login = () => {
             </form>
 
             <p><small>New to e-commerce shop? <Link to="/singup" className='have-login'>Create New Account</Link></small></p>
+            <ToastContainer />
         </div>
     );
 };

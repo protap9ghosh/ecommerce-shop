@@ -30,6 +30,7 @@ const SignUP = () => {
         createUser(email, password)
             .then(result => {
                 const loggedUser = result.user;
+                toast.success("User Sign Up Successful");
                 console.log(loggedUser);
             })
             .catch(error => {
