@@ -7,7 +7,11 @@ import { faRightToBracket, faUserLarge } from '@fortawesome/free-solid-svg-icons
 import { AuthContext } from "../Providers/AuthProvider";
 
 const Header = () => {
-    const { user, } = useContext(AuthContext)
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogOut = () => {
+         
+    }
 
     return (
         <div>
@@ -23,7 +27,7 @@ const Header = () => {
                     <Link to="/login"><FontAwesomeIcon icon={faUserLarge} className="font-icon" /></Link>
                     <Link to="/singup"><FontAwesomeIcon icon={faRightToBracket} className="font-icon" /></Link>
 
-                    {user && <span>Welcome</span>}
+                    {user && <span>Welcome{user.email} <button onClick={handleLogOut}>Sign Out</button></span>}
                 </div>
             </nav>
         </div>

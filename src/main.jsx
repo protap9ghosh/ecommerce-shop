@@ -9,7 +9,7 @@ import Inventory from "./components/Inventory/Inventory";
 import Login from "./components/Login/Login";
 import cartProductsLoader from "./loaders/cartProductsLoader";
 import Checkout from "./components/Checkout/Checkout";
-import SingUP from "./components/SingUp/SingUP";
+import SingUP from "./components/SingUp/SignUP";
 import AuthProvider from "./components/Providers/AuthProvider";
 
 const router = createBrowserRouter([
