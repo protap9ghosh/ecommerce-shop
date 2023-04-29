@@ -11,6 +11,8 @@ const Login = () => {
     const location = useLocation();
     console.log(location);
 
+    const from = location.state?.from?.pathname || '/';
+
     const handleLogin = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -24,7 +26,7 @@ const Login = () => {
                 console.log(loggedUser);
                 toast.success("Log In Successful");
                 form.reset();
-                navigate('/');
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error);
